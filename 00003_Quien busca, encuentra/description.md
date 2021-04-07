@@ -1,3 +1,5 @@
+Nota para @may: este ejercicio puede partirse en tres
+
 Hacé cada uno de estos ejercicios en orden. No avances al siguiente hasta que el primero este funcionando. 
 Usa `console.log` a cada momento para revisar que hayas seleccionado los elementos correctos, y que la data que estes usando sea la correcta. 
 
