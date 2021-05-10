@@ -1,0 +1,1 @@
+Al seleccionar un color, deben aparecer solo los gatos del color seleccionado. 

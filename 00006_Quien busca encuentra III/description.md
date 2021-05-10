@@ -1,0 +1,1 @@
+Al seleccionar un sexo, deben aparecer solo los gatos del sexo seleccionado. 
