@@ -1,6 +1,6 @@
-Nota para @may: propongo encarar estos ejercicios como una secuencia con código previo, en la que se den instrucciones bastante precisas (o código por defecto) que permitan una evaluación bastante exhaustiva. Por lo que veo ya el ejercicio original está bastante guiado y lo permite
+Necesitamos agregar más información a nuestras cards de gatitos :heart_eyes_cat:, para lograrlo:
 
-> Agregale a cada tarjeta la siguiente `data` (inventada)
+> Agregale a cada tarjeta la siguiente `data`:
 >
 > * nombre
 > * sexo
