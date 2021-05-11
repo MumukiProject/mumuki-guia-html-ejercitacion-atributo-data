@@ -1,1 +1,1 @@
-TODO
+En esta lección utilizaremos data que nos permita aplicar filtros a nuestros elementos. :mag:
