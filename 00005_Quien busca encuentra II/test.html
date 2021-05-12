@@ -6,13 +6,11 @@
         _resetDocument_();
       });
       
-      it("Si filtramos con tricolor nos devuelve a ", () => {
-        let texto = document.getElementsByTagName("textarea")[0];
-        let boton = document.getElementsByTagName('button')[0];
-        texto.value = 'Esta es una cadena de 35 caracteres';
-        _dispatch_("change",  texto);
-        _dispatch_("click",  boton);
-        document.getElementsByTagName('span')[0].should.have.trimmed.text("Comentario enviado");
+      it("Si filtramos con el color blanco nos devuelve un gato ", () => {
+        let selectValue = document.getElementsByTagName("select")[0];
+        let cards = document.querySelectotAll('card');
+        _dispatch_("change",  selectValue);
+        document.querySelectorAll('card').length.should.eql(1);
       });
       
     });
