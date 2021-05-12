@@ -8,10 +8,10 @@
       
       it("Si filtramos con el color blanco nos devuelve un gato ", () => {
         let selectValue = document.getElementsByTagName("select")[0];
-        let cards = document.querySelectorAll('card');
+        let cards = document.getElementsByClassName('card');
         _dispatch_("change",  selectValue);
         selectValue.value = 'blanco';
-        document.querySelectorAll('card').length.should.eql(1);
+        document.getElementsByClassName('card').length.should.eql(1);
       });
       
     });
