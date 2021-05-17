@@ -1,4 +1,25 @@
 /*<output#*//*#output>*/
-/*<tests#*//*#tests>*/
+/*<tests#*/describe("", function() {
+  context("", () => {
+    describe("", () => {
+      beforeEach(() => {
+        _resetDocument_();
+      });
+      
+      it("Si filtramos por hembra nos muestra", () => {
+        input = document.querySelector("input[name=categorias]:checked");
+        input.value = 'hembra';
+        let artilugia = document.getElementsByClassName('card')[0];
+        let boris = document.getElementsByClassName('card')[1];
+        let pippin = document.getElementsByClassName('card')[2];
+        _dispatch_("change", select);
+        
+        artilugia.should.be.visible;
+        boris.should.not.be.visible;
+        pippin.should.not.be.visible;
+      });
+    });
+  });  
+});/*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
