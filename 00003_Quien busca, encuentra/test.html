@@ -24,7 +24,14 @@
         document.getElementsByClassName('card')[0].should.be.visible;
         document.getElementsByClassName('card')[1].should.not.be.visible;
         document.getElementsByClassName('card')[2].should.not.be.visible;
-
+      });
+      
+      it("Si buscamos a Boris solo se visualiza Boris", () => {
+        input.value = 'Artilugia';
+        _dispatch_("change", input);
+        document.getElementsByClassName('card')[0].should.not.be.visible;
+        document.getElementsByClassName('card')[1].should.be.visible;
+        document.getElementsByClassName('card')[2].should.not.be.visible;
       });
     });
   });  
