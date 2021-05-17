@@ -8,7 +8,7 @@
       
       it("Si filtramos con el color blanco solo se muestra Artilugia", () => {
         let selectValue = document.getElementsByTagName("select")[0];
-        _dispatch_("change",  selectValue);
+        _dispatch_("click",  selectValue);
         selectValue.value = 'blanco';
         
         document.getElementsByClassName('card')[0].should.be.visible;
