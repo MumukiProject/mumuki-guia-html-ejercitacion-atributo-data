@@ -27,7 +27,7 @@
       });
       
       it("Si buscamos a Boris solo se visualiza Boris", () => {
-        input.value = 'Artilugia';
+        input.value = 'Boris';
         _dispatch_("change", input);
         document.getElementsByClassName('card')[0].should.not.be.visible;
         document.getElementsByClassName('card')[1].should.be.visible;
