@@ -2,43 +2,56 @@
 /*<tests#*/describe("", function() {
   context("", () => {
     describe("", () => {
+      let card1;
+      let card2;
+      let card3;
+      let input;
+      let sexo;
+      
       beforeEach(() => {
         _resetDocument_();
+        sexo = document.getElementById("sexo");
+        input = document.querySelector("input[name=sexo]:checked");
+        card1 = document.createElement('div');
+        card2 = document.createElement('div');
+        card3 = document.createElement('div');
+        document.body.appendChild(card1);
+        document.body.appendChild(card2);
+        document.body.appendChild(card3);
+        card1.setAttribute('class','card');
+        card2.setAttribute('class','card');
+        card3.setAttribute('class','card');
+        card1.setAttribute('data-sexo','hembra');
+        card2.setAttribute('data-sexo','indistinto');
+        card3.setAttribute('data-sexo','macho');
       });
-        
-      it("Si filtramos por hembra nos muestra", () => {
-        let input = document.querySelector("input[name=sexo]");
+      
+      
+      it("Si tengo 1 gatito hembra y filtramos por sexo hembra nos muestra solo esa card", () => {
         input.value = 'hembra';
-        let artilugia = document.getElementsByClassName('card')[0];
-        let boris = document.getElementsByClassName('card')[1];
-        let pippin = document.getElementsByClassName('card')[2];
-        _dispatch_("change", input);
-        
-        artilugia.should.be.visible;
-        /*boris.should.not.be.visible;
-        pippin.should.not.be.visible;*/
+        _dispatch_("click", sexo);
+
+        card1.should.be.visible;
+        card2.should.not.be.visible;
+        card3.should.not.be.visible;
       });
       
-        it("Si filtramos por macho nos muestra", () => {
-        let input = document.querySelector("input[name=sexo]");
+      it("Si tengo 1 gatito de sexo indeterminado y filtramos por sexo indeterminado nos muestra solo esa card", () => {
+        input.value = 'indeterminado';
+        _dispatch_("click", sexo);
+
+        card1.should.be.visible;
+        card2.should.not.be.visible;
+        card3.should.not.be.visible;
+      });
+
+      it("Si tengo 1 gatito macho y filtramos por sexo macho nos muestra solo esa card", () => {
         input.value = 'macho';
-        let artilugia = document.getElementsByClassName('card')[0];
-        let boris = document.getElementsByClassName('card')[1];
-        let pippin = document.getElementsByClassName('card')[2];
-        _dispatch_("change", input);
-        boris.should.be.visible;
-        //pippin.should.not.be.visible;
-      });
-      
-        it("Si filtramos por indistinto nos muestra", () => {
-        let input = document.querySelector("input[name=sexo]");
-        input.value = 'indistinto';
-        let artilugia = document.getElementsByClassName('card')[0];
-        let boris = document.getElementsByClassName('card')[1];
-        let pippin = document.getElementsByClassName('card')[2];
-        _dispatch_("change", input);
-        //boris.should.be.visible;
-        pippin.should.be.visible;
+        _dispatch_("click", sexo);
+
+        card1.should.be.visible;
+        card2.should.not.be.visible;
+        card3.should.not.be.visible;
       });
     });
   });  
