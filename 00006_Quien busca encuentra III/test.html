@@ -44,8 +44,8 @@
         radios[2].checked = false;
         _dispatch_("click", sexo);
 
-        card1.should.be.visible;
-        card2.should.not.be.visible;
+        card1.should.not.be.visible;
+        card2.should.be.visible;
         card3.should.not.be.visible;
       });
 
@@ -55,9 +55,9 @@
         radios[2].checked = true;
         _dispatch_("click", sexo);
 
-        card1.should.be.visible;
+        card1.should.not.be.visible;
         card2.should.not.be.visible;
-        card3.should.not.be.visible;
+        card3.should.be.visible;
       });
     });
   });  
