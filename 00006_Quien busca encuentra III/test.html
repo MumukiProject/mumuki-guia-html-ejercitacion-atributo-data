@@ -22,8 +22,8 @@
         card2.setAttribute('class','card');
         card3.setAttribute('class','card');
         card1.setAttribute('data-sexo','hembra');
-        card2.setAttribute('data-sexo','indistinto');
-        card3.setAttribute('data-sexo','macho');
+        card2.setAttribute('data-sexo','macho');
+        card3.setAttribute('data-sexo','indistinto');
       });
       
       
@@ -38,7 +38,7 @@
         card3.should.not.be.visible;
       });
       
-      it("Si tengo 1 gatito de sexo indeterminado y filtramos por sexo indeterminado nos muestra solo esa card", () => {
+      it("Si tengo 1 gatito macho y filtramos por sexo macho nos muestra solo esa card", () => {
         radios[0].checked = false;
         radios[1].checked = true;
         radios[2].checked = false;
@@ -49,7 +49,7 @@
         card3.should.not.be.visible;
       });
 
-      it("Si tengo 1 gatito macho y filtramos por sexo macho nos muestra solo esa card", () => {
+      it("Si tengo 1 gatito de sexo indistinto y filtramos por sexo indistinto nos muestra solo esa card", () => {
         radios[0].checked = false;
         radios[1].checked = false;
         radios[2].checked = true;
