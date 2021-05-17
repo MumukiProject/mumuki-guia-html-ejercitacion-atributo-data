@@ -7,9 +7,9 @@
       });
       
       it("Si filtramos con el color blanco solo se muestra Artilugia", () => {
-        let selectValue = document.getElementsByTagName("select")[0];
-        _dispatch_("click",  selectValue);
+        let selectValue = document.querySelector("select");
         selectValue.value = 'blanco';
+        _dispatch_("click",  selectValue);
         
         document.getElementsByClassName('card')[0].should.be.visible;
         document.getElementsByClassName('card')[2].should.not.be.visible;
