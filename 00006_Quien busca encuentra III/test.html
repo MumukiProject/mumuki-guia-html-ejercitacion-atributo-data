@@ -11,7 +11,7 @@
       beforeEach(() => {
         _resetDocument_();
         sexo = document.getElementById("sexo");
-        input = document.querySelector("input[name=sexo]:checked");
+        radios = document.querySelectorAll("input[name=sexo]");
         card1 = document.createElement('div');
         card2 = document.createElement('div');
         card3 = document.createElement('div');
@@ -28,7 +28,9 @@
       
       
       it("Si tengo 1 gatito hembra y filtramos por sexo hembra nos muestra solo esa card", () => {
-        input.value = 'hembra';
+        radios[0].checked = true;
+        radios[1].checked = false;
+        radios[2].checked = false;
         _dispatch_("click", sexo);
 
         card1.should.be.visible;
