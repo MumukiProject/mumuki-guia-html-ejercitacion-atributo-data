@@ -7,12 +7,16 @@
       });
       
       it("Si filtramos con el color blanco solo se muestra Artilugia", () => {
-        let selectValue = document.querySelector("select");
-        selectValue.value = 'blanco';
-        _dispatch_("click",  selectValue);
+        let select = document.querySelector("select");
+        select.value = 'blanco';
+        let artilugia = document.getElementsByClassName('card')[0];
+        let boris = document.getElementsByClassName('card')[1];
+        let pippin = document.getElementsByClassName('card')[2];
+        _dispatch_("change", select);
         
-        document.getElementsByClassName('card')[0].should.be.visible;
-        document.getElementsByClassName('card')[2].should.not.be.visible;
+        artilugia.should.be.visible;
+        boris.should.not.be.visible;
+        pippin.should.not.be.visible;
       });
     });
   });  
