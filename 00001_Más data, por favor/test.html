@@ -1,4 +1,8 @@
 /*<output#*//*#output>*/
-/*<tests#*//*#tests>*/
+/*<tests#*/it('Dentro de la card hay un atributo llamado data-nombre',() => {
+  document.querySelector('card').should.have.attr('data-nombre');
+})
+
+/*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
