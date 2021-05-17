@@ -26,8 +26,7 @@
         let boris = document.getElementsByClassName('card')[1];
         let pippin = document.getElementsByClassName('card')[2];
         _dispatch_("change", input);
-        
-        artilugia.should.not.be.visible;
+        artilugia.should.have.style('visibility', 'hidden');
         boris.should.be.visible;
         pippin.should.not.be.visible;
       });
