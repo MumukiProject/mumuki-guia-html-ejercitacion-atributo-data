@@ -1,4 +1,23 @@
 /*<output#*//*#output>*/
-/*<tests#*//*#tests>*/
+/*<tests#*/describe("", function() {
+  context("", () => {
+    describe("", () => {
+      let input;
+      
+      beforeEach(() => {
+        _resetDocument_();
+        input = document.querySelector("input");
+      });
+      
+      
+      it("Si buscamos a Pippin solo se visualiza Pippin", () => {
+        input.value = 'Pippin';
+        _dispatch_("change", input);
+        document.querySelector('card')[0.should.not.be.visible;
+
+      });
+    });
+  });  
+});/*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
