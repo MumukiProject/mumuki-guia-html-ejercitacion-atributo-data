@@ -18,6 +18,19 @@
         /*boris.should.not.be.visible;
         pippin.should.not.be.visible;*/
       });
+      
+        it("Si filtramos por hembra nos muestra", () => {
+        let input = document.querySelector("input[name=sexo]");
+        input.value = 'macho';
+        let artilugia = document.getElementsByClassName('card')[0];
+        let boris = document.getElementsByClassName('card')[1];
+        let pippin = document.getElementsByClassName('card')[2];
+        _dispatch_("change", input);
+        
+        artilugia.should.not.be.visible;
+        boris.should.be.visible;
+        pippin.should.not.be.visible;
+      });
     });
   });  
 });/*#tests>*/
