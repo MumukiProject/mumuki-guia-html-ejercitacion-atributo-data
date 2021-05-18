@@ -2,23 +2,38 @@
 /*<tests#*/describe("", function() {
   context("", () => {
     describe("", () => {
+      let card1;
+      let card2;
+      let card3;
+      let input;
+      let color;
+      
       beforeEach(() => {
         _resetDocument_();
+        select = document.querySelector('select');
+        card1 = document.createElement('div');
+        card2 = document.createElement('div');
+        card3 = document.createElement('div');
+        document.body.appendChild(card1);
+        document.body.appendChild(card2);
+        document.body.appendChild(card3);
+        card1.setAttribute('class','card');
+        card2.setAttribute('class','card');
+        card3.setAttribute('class','card');
+        card1.setAttribute('data-color','naranja');
+        card2.setAttribute('data-color','blanco');
+        card3.setAttribute('data-color','gris');
       });
       
-      it("Si filtramos con el color blanco solo se muestra Artilugia", () => {
-        let select = document.querySelector("select");
-        select.value = 'blanco';
-        let artilugia = document.getElementsByClassName('card')[0];
-        let boris = document.getElementsByClassName('card')[1];
-        let pippin = document.getElementsByClassName('card')[2];
-        _dispatch_("change", select);
-        
-        artilugia.should.be.visible;
-        /*boris.should.not.be.visible;
-        pippin.should.not.be.visible;*/
-      });
       
+      it("Si tengo 1 gatito naranja y filtramos por color naranja nos muestra solo esa card", () => {
+        select.value = 'naranja';
+        _dispatch_("click", select);
+
+        card1.should.be.visible;
+        card2.should.not.be.visible;
+        card3.should.not.be.visible;
+      });
     });
   });  
 });/*#tests>*/
