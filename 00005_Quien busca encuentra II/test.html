@@ -28,11 +28,11 @@
       
       it("Si tengo 1 gatito naranja y filtramos por color naranja nos muestra solo esa card", () => {
         select.value = 'naranja';
-        _dispatch_("click", select);
+        _dispatch_("change", select);
 
         card1.should.be.visible;
-        card2.should.not.be.visible;
-        card3.should.not.be.visible;
+        /*card2.should.not.be.visible;
+        card3.should.not.be.visible;*/
       });
     });
   });  
