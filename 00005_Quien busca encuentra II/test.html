@@ -42,6 +42,14 @@
         card3.should.not.be.visible;
       });
       
+      it("Si tengo 1 gatito gris y filtramos por color gris nos muestra solo esa card", () => {
+        select.value = 'gris';
+        _dispatch_("change", select);
+        card1.should.not.be.visible;
+        card2.should.not.be.visible;
+        card3.should.be.visible;
+      });
+      
     });
   });  
 });/*#tests>*/
