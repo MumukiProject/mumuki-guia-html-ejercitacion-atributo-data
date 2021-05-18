@@ -10,7 +10,7 @@
       
       beforeEach(() => {
         _resetDocument_();
-        sexo = document.getElementById("sexo");
+        sexo = document.querySelectorAll("input[name=sexo]:checked");
         radios = document.querySelectorAll("input[name=sexo]");
         card1 = document.createElement('div');
         card2 = document.createElement('div');
