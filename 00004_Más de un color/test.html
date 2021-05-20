@@ -62,6 +62,15 @@
         card2.should.not.be.visible;
         card3.should.be.visible;
       });
+      
+      it("Si no seleccionamos ningún color, no se muestra ninguna card", () => {
+        checkNaranja.checked = false;
+        checkBlanco.checked = false;
+        checkGris.checked = false;
+        card1.should.not.be.visible;
+        card2.should.not.be.visible;
+        card3.should.not.be.visible;
+      });
     });
   });  
 });/*#tests>*/
