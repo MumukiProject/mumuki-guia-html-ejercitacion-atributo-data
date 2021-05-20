@@ -44,15 +44,15 @@
       });
       
       it("Si tengo un gatito naranja, un gatito blanco y un gatito gris y filtramos por esos tres colores nos muestra las tres cards", () => {
-        checkNaranja.checked
-        checkBlanco.checked;
-        checkGris.checked;
+        checkNaranja.check = true;
+        checkBlanco.check = true;
+        checkGris.check = true;
         _dispatch_("change", checkNaranja);
         _dispatch_("change", checkBlanco);
         _dispatch_("change", checkGris);
-        card1.style.visibility = 'visible';
-        card2.style.visibility = 'visible';
-        card3.style.visibility = 'visible';
+        card1.should.be.visible;
+        card2.should.be.visible;
+        card3.should.be.visible;
       });
       
       it("Si tengo un gatito gris y filtramos por color gris nos muestra solo esa card", () => {
