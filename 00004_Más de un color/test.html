@@ -38,9 +38,9 @@
         _dispatch_("change", checkNaranja);
         _dispatch_("change", checkBlanco);
         _dispatch_("change", checkGris);
-        card1.should.be.visible;
+        card1.style.visibility = 'visible';
         card2.style.visibility = 'hidden';
-        card3.should.be.visible;
+        card3.style.visibility = 'visible';
       });
       
       it("Si tengo un gatito naranja, un gatito blanco y un gatito gris y filtramos por esos tres colores nos muestra las tres cards", () => {
@@ -50,9 +50,9 @@
         _dispatch_("change", checkNaranja);
         _dispatch_("change", checkBlanco);
         _dispatch_("change", checkGris);
-        card1.should.be.visible;
-        card2.should.be.visible;
-        card3.should.be.visible;
+        card1.style.visibility = 'visible';
+        card2.style.visibility = 'visible';
+        card3.style.visibility = 'visible';
       });
       
       it("Si tengo un gatito gris y filtramos por color gris nos muestra solo esa card", () => {
@@ -62,9 +62,9 @@
         _dispatch_("change", checkNaranja);
         _dispatch_("change", checkBlanco);
         _dispatch_("change", checkGris);
-        card1.should.not.be.visible;
-        card2.should.not.be.visible;
-        card3.should.be.visible;
+        card1.style.visibility = 'hidden';
+        card2.style.visibility = 'hidden';
+        card3.style.visibility = 'visible';
       });
       
       it("Si no seleccionamos ningún color, no se muestra ninguna card", () => {
@@ -74,9 +74,9 @@
         _dispatch_("change", checkNaranja);
         _dispatch_("change", checkBlanco);
         _dispatch_("change", checkGris);
-        card1.should.not.be.visible;
-        card2.should.not.be.visible;
-        card3.should.not.be.visible;
+        card1.style.visibility = 'hidden';
+        card2.style.visibility = 'hidden';
+        card3.style.visibility = 'hidden';
       });
     });
   });  
