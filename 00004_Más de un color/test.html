@@ -8,13 +8,12 @@
       let checkNaranja;
       let checkBlanco;
       let checkGris;
-      let color;
       
       beforeEach(() => {
         _resetDocument_();
         _resetUserInteractions_();
         
-        checkNaranja = document.querySelectorAll('input[type=checkbox]')[0];
+        checkNaranja = document.querySelector('input[name=naranja]');
         checkBlanco = document.querySelectorAll('input[type=checkbox]')[1];
         checkGris = document.querySelectorAll('input[type=checkbox]')[2];
         card1 = document.createElement('div');
@@ -63,8 +62,8 @@
         _dispatch_("change", checkNaranja);
         _dispatch_("change", checkBlanco);
         _dispatch_("change", checkGris);
-        //card1.should.not.be.visible;
-        //card2.should.not.be.visible;
+        card1.should.not.be.visible;
+        card2.should.not.be.visible;
         card3.should.be.visible;
       });
       
