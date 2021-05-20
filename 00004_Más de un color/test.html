@@ -37,6 +37,7 @@
         checkBlanco.checked = false;
         checkGris.checked = true;
         _dispatch_("change", checkNaranja);
+        _dispatch_("change", checkBlanco);
         _dispatch_("change", checkGris);
         card1.should.be.visible;
         card2.should.not.be.visible;
@@ -59,6 +60,8 @@
         checkNaranja.checked = false;
         checkBlanco.checked = false;
         checkGris.checked = true;
+        _dispatch_("change", checkNaranja);
+        _dispatch_("change", checkBlanco);
         _dispatch_("change", checkGris);
         card1.should.not.be.visible;
         card2.should.not.be.visible;
@@ -69,6 +72,9 @@
         checkNaranja.checked = false;
         checkBlanco.checked = false;
         checkGris.checked = false;
+        _dispatch_("change", checkNaranja);
+        _dispatch_("change", checkBlanco);
+        _dispatch_("change", checkGris);
         card1.should.not.be.visible;
         card2.should.not.be.visible;
         card3.should.not.be.visible;
