@@ -34,7 +34,7 @@
       it("Si tengo un gatito naranja y un gatito gris y filtramos por esos dos colores nos muestra solo esas dos cards", () => {
         checkNaranja.check = true;
         checkBlanco.check = false;
-        checkGris.check = true;
+        checkGris.check = false;
         _dispatch_("change", checkNaranja);
         _dispatch_("change", checkBlanco);
         _dispatch_("change", checkGris);
