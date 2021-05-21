@@ -12,7 +12,7 @@ it("Se introdujeron cuatro inputs", () => {
 });
 
 it("Se introdujo un div con id sexo", () => {
-  document.getElementsByTagName("input[type='text']").length.should.eql(1);
+  document.querySelectorAll("input[type='text']").length.should.eql(1);
 });
 
 it("Se introdujo un input de tipo text", () => {
@@ -20,11 +20,11 @@ it("Se introdujo un input de tipo text", () => {
 });
 
 it("Se introdujeron tres inputs de tipo radio", () => {
-  document.getElementsByTagName("input[type='radio']").length.should.eql(3);
+  document.querySelectorAll("input[type='radio']").length.should.eql(3);
 });
 
 it("Los tres inputs de tipo radio deben tener name sexo", () => {
-  document.getElementsByTagName("input[type='radio'][name='sexo']").length.should.eql(3);
+  document.querySelectorAll("input[type='radio'][name='sexo']").length.should.eql(3);
 });
 /*#tests>*/
 /*<options#*/output_ignore_scripts: true
