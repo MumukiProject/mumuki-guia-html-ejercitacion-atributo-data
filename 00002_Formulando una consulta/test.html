@@ -13,7 +13,7 @@ it("El select tiene tres opciones", () => {
 
 it("El select tiene las opciones naranja, blanco y gris", () => {
   [0,1,2].some((numero) => { 
-	document.querySelector("select").options.item(numero).includes("naranja")
+	document.querySelector("select").options.item(numero).value.includes("naranja")
 	}).should.eql(true);
 });
 
