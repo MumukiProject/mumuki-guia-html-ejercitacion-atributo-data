@@ -38,9 +38,9 @@
         checkBlanco.checked = false;
         checkGris.checked = true;
         
-        _dispatch_("change", checkNaranja);
-        _dispatch_("change", checkBlanco);
-        _dispatch_("change", checkGris);    
+        _dispatch_("click", checkNaranja);
+        _dispatch_("click", checkBlanco);
+        _dispatch_("click", checkGris);    
         document.getElementsByClassName('card')[0].should.be.visible;
         document.getElementsByClassName('card')[1].should.not.be.visible;
         document.getElementsByClassName('card')[2].should.be.visible;
