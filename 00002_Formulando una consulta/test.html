@@ -16,7 +16,7 @@ it("Se introdujo un div con id sexo", () => {
 });
 
 it("Se introdujo un input de tipo text", () => {
-  document.getElementsByTagName("input[type='text']").length.should.eql(1);
+  document.querySelectorAll("input[type='text']").length.should.eql(1);
 });
 
 it("Se introdujeron tres inputs de tipo radio", () => {
