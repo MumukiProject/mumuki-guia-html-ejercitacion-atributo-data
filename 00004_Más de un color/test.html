@@ -11,7 +11,6 @@
       
       beforeEach(() => {
         _resetDocument_();
-        _resetUserInteractions_();
         checkNaranja = document.querySelectorAll("input[type='checkbox']")[0];
         checkBlanco = document.querySelectorAll("input[type='checkbox']")[1];
         checkGris = document.querySelectorAll("input[type='checkbox']")[2];
@@ -46,9 +45,9 @@
         checkNaranja.check = true;
         checkBlanco.check = true;
         checkGris.check = true;
-        _dispatch_("change", checkNaranja);
-        _dispatch_("change", checkBlanco);
-        _dispatch_("change", checkGris);
+        _dispatch_("click", checkNaranja);
+        _dispatch_("click", checkBlanco);
+        _dispatch_("click", checkGris);
         card1.should.be.visible;
         card2.should.be.visible;
         card3.should.be.visible;
@@ -58,9 +57,9 @@
         checkNaranja.check = false;
         checkBlanco.check = false;
         checkGris.check = true;
-        _dispatch_("change", checkNaranja);
-        _dispatch_("change", checkBlanco);
-        _dispatch_("change", checkGris);
+        _dispatch_("click", checkNaranja);
+        _dispatch_("click", checkBlanco);
+        _dispatch_("click", checkGris);
         card1.should.not.be.visible;
         card2.should.not.be.visible;
         card3.should.be.visible;
@@ -70,9 +69,9 @@
         checkNaranja.checked = false;
         checkBlanco.checked = false;
         checkGris.checked = false;
-        _dispatch_("change", checkNaranja);
-        _dispatch_("change", checkBlanco);
-        _dispatch_("change", checkGris);
+        _dispatch_("click", checkNaranja);
+        _dispatch_("click", checkBlanco);
+        _dispatch_("click", checkGris);
         card1.should.not.be.visible;
         card2.should.not.be.visible;
         card3.should.not.be.visible;
