@@ -7,6 +7,10 @@ it("Se introdujo un select", () => {
   document.querySelector("select").should.exist;
 });
 
+it("Se introdujeron tres labels", () => {
+  document.querySelectorAll("label").length.should.eql(3);
+});
+
 it("Se introdujo un div con id sexo", () => {
   document.querySelectorAll("input[type='text']").length.should.eql(1);
 });
