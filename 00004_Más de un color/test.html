@@ -12,7 +12,7 @@
       beforeEach(() => {
         _resetDocument_();
 
-        checkNaranja = document.querySelectorAll("input[type='checkbox']")[0];
+        /*checkNaranja = document.querySelectorAll("input[type='checkbox']")[0];
         checkBlanco = document.querySelectorAll("input[type='checkbox']")[1];
         checkGris = document.querySelectorAll("input[type='checkbox']")[2];
         card1 = document.createElement('div');
@@ -26,7 +26,7 @@
         card3.setAttribute('class','card');
         card1.setAttribute('data-color','naranja');
         card2.setAttribute('data-color','blanco');
-        card3.setAttribute('data-color','gris');
+        card3.setAttribute('data-color','gris');*/
       });
       
       it("prueba", () => {
@@ -40,9 +40,9 @@
         _dispatch_("change", checkNaranja);
         _dispatch_("change", checkBlanco);
         _dispatch_("change", checkGris);    
-        card1.should.be.visible;
-        card2.should.not.be.visible;
-        card3.should.be.visible;
+        document.getElementsByClassName('card')[0].should.be.visible;
+        document.getElementsByClassName('card')[1].should.not.be.visible;
+        document.getElementsByClassName('card')[2].should.be.visible;
       });
       
       it("Si tengo un gatito naranja, un gatito blanco y un gatito gris y filtramos por esos tres colores nos muestra las tres cards", () => {
