@@ -11,7 +11,7 @@
       
       beforeEach(() => {
         _resetDocument_();
-
+        _resetUserInteractions_();
         checkNaranja = document.querySelectorAll("input[type='checkbox']")[0];
         checkBlanco = document.querySelectorAll("input[type='checkbox']")[1];
         checkGris = document.querySelectorAll("input[type='checkbox']")[2];
@@ -28,11 +28,7 @@
         card2.setAttribute('data-color','blanco');
         card3.setAttribute('data-color','gris');
       });
-      
-      it("prueba", () => {
-        document.getElementsByClassName('card')[0].sarasa.should.eql(9);
-      });
-      
+
       it("Si tengo un gatito naranja y un gatito gris y filtramos por esos dos colores nos muestra solo esas dos cards", () => {
         checkNaranja.checked = true;
         checkBlanco.checked = false;
