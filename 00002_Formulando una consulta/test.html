@@ -7,6 +7,10 @@ it("Se introdujo un select", () => {
   document.querySelector("select").should.exist;
 });
 
+it("El select tiene tres opciones") {
+  document.querySelector("select").option.length.should.eql(3);
+}
+
 it("El select tiene las opciones naranja, blanco y gris", () => {
   document.querySelector("select").options.should.contain("naranja");
   document.querySelector("select").options.should.contain("blanco");
