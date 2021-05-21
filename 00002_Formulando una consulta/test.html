@@ -12,9 +12,9 @@ it("El select tiene tres opciones", () => {
 });
 
 it("El select tiene las opciones naranja, blanco y gris", () => {
-  document.querySelector("select").options.should.contain("naranja");
-  document.querySelector("select").options.should.contain("blanco");
-  document.querySelector("select").options.should.contain("gris");
+  document.querySelector("select").options.item(0).text.should.contain("naranja");
+  document.querySelector("select").options.item(1).text.should.contain("blanco");
+  document.querySelector("select").options.item(2).text.should.contain("gris");
 });
 
 it("Se introdujeron tres labels", () => {
