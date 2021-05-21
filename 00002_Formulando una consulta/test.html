@@ -10,6 +10,22 @@ it("Se introdujo un select", () => {
 it("Se introdujeron cuatro inputs", () => {
   document.getElementsByTagName("input").length.should.eql(4);
 });
+
+it("Se introdujo un div con id sexo", () => {
+  document.getElementsByTagName("input[type='text']").length.should.eql(1);
+});
+
+it("Se introdujo un input de tipo text", () => {
+  document.getElementsByTagName("input[type='text']").length.should.eql(1);
+});
+
+it("Se introdujeron tres inputs de tipo radio", () => {
+  document.getElementsByTagName("input[type='radio']").length.should.eql(3);
+});
+
+it("Los tres inputs de tipo radio deben tener name sexo", () => {
+  document.getElementsByTagName("input[type='radio'][name='sexo']").length.should.eql(3);
+});
 /*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
