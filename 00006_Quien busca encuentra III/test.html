@@ -28,11 +28,7 @@
       
       it("Si tengo 1 gatito hembra y filtramos por sexo hembra nos muestra solo esa card", () => {
         radios[0].checked = true;
-        radios[1].checked = false;
-        radios[2].checked = false;
         _dispatch_("change", radios[0]);
-        _dispatch_("change", radios[1]);
-        _dispatch_("change", radios[2]);
 
         card1.should.be.visible;
         card2.should.not.be.visible;
@@ -40,12 +36,8 @@
       });
       
       it("Si tengo 1 gatito macho y filtramos por sexo macho nos muestra solo esa card", () => {
-        radios[0].checked = false;
         radios[1].checked = true;
-        radios[2].checked = false;
-        _dispatch_("change", radios[0]);
         _dispatch_("change", radios[1]);
-        _dispatch_("change", radios[2]);
 
         card1.should.not.be.visible;
         card2.should.be.visible;
@@ -53,11 +45,7 @@
       });
 
       it("Si tengo 1 gatito de sexo indistinto y filtramos por sexo indistinto nos muestra solo esa card", () => {
-        radios[0].checked = false;
-        radios[1].checked = false;
         radios[2].checked = true;
-        _dispatch_("change", radios[0]);
-        _dispatch_("change", radios[1]);
         _dispatch_("change", radios[2]);
 
         card1.should.not.be.visible;
