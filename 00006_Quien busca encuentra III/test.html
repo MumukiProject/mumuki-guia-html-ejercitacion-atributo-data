@@ -30,7 +30,7 @@
         radios[0].checked = true;
         radios[1].checked = false;
         radios[2].checked = false;
-        _dispatch_("click", radios[0]);
+        _dispatch_("change", radios[0]);
 
         card1.should.be.visible;
         card2.should.not.be.visible;
@@ -41,7 +41,7 @@
         radios[0].checked = false;
         radios[1].checked = true;
         radios[2].checked = false;
-        _dispatch_("click", radios[1]);
+        _dispatch_("change", radios[1]);
 
         card1.should.not.be.visible;
         card2.should.be.visible;
@@ -52,7 +52,7 @@
         radios[0].checked = false;
         radios[1].checked = false;
         radios[2].checked = true;
-        _dispatch_("click", radios[2]);
+        _dispatch_("change", radios[2]);
 
         card1.should.not.be.visible;
         card2.should.not.be.visible;
