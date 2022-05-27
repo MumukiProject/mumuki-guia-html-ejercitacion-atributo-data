@@ -40,7 +40,7 @@
       
       it("Si tengo 1 gatito macho y filtramos por sexo macho nos muestra solo esa card", () => {
         radio2.checked = true;
-        _dispatch_("change", radios2);
+        _dispatch_("change", radio2);
 
         card1.should.not.be.visible;
         card2.should.be.visible;
